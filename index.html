@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>GCC NoBrackets</title>
     <style>
         body {
             background: url("bordure.svg") repeat-y left top fixed, url("bordure.svg") repeat-y right top 800px fixed;
@@ -9,17 +10,14 @@
     <link rel="stylesheet" href="index.css">
 
     <meta charset="UTF-8">
-    <title>Title</title>
 </head>
-<body id="try">
-<div id="borderEffectL">
-
-</div>
-<div id="borderEffectR">
-</div>
+<body id="background" onload="portrait()">
+<div id="portrait">
     <div classname="divTitle">
-        <h1 class="title1">NO BRACKETS CTF</h1>
-        <h2 class="title2">by GCC</h2>
+        <div class="title">
+            <h1 class="title1">NO BRACKETS CTF</h1>
+            <h2 class="title2">by GCC</h2>
+        </div>
         <img class="logo" src="logonbctftmp.png" alt="logo"/>
     </div>
     <div class="container">
@@ -71,5 +69,6 @@
         <button class="bouton">S'inscrire !</button>
     </div>
     <script src="index.js"></script>
+</div>
 </body>
 </html>

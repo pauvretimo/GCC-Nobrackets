@@ -36,10 +36,18 @@ p strong {
     font-size: larger;
 }
 
+
 .divTitle {
     align-items: center;
     display: flex;
     flex-direction: column;
+}
+
+.title {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    height: fit-content;
 }
 
 .title1 {
@@ -49,7 +57,7 @@ p strong {
 }
 
 .title2 {
-    padding-left: 26%;
+    padding-left: 10%;
     font-size: 4vh;
     text-shadow: 1px 1px #B0E0EE;
 }
@@ -62,6 +70,7 @@ p strong {
 .inscription {
     text-align: center;
     font-size: xx-large;
+    margin-top: 6%;
 
     text-shadow: 1px 1px #B0E0EE;
 }
@@ -73,15 +82,15 @@ p strong {
 
 .logo {
     display: block;
-    width: 50%;
-    margin: 5% auto;
+    width: 36%;
+    margin: 3% auto;
 }
 
 .container {
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    margin: 2% auto;
     text-align: center;
 
     font-family: -apple-system,
