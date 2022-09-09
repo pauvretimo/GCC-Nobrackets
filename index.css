@@ -182,6 +182,16 @@ p strong {
     box-shadow: 0.06em 0.06em 0.05em 0.05em #B0E0EE;
 }
 
+.bouton:hover {
+    transform: scale(108%);
+    box-shadow: 0.06em 0.06em 0.06em 0.06em #B0E0EE;
+}
+
+.bouton:active {
+    transform: scale(102%);
+    box-shadow: 0.06em 0.06em 0.06em 0.06em #89acb6, inset 0 0 0.03em 0.03em black;
+}
+
 .foot {
     width: 100%;
     display: flex;
