@@ -94,12 +94,12 @@ function scrollVerif() {
     document.getElementById("background").style.backgroundPositionY = (Math.floor(-distance/4)).toString() + 'px, ' + (Math.floor(-distance/4) + 800).toString() + 'px';
     if (distance + window.innerHeight < document.body.scrollHeight - 100) {
         // s'occupe de l'apparition du bouton scroll to top
-        document.getElementsByClassName("toTheTop")[0].classList.add('hide')
+        document.getElementsByClassName("imgForbidden")[0].classList.add('hide')
         // déclenche l'animation du logo gcc
         document.getElementsByClassName("imgForbidden")[0].classList.remove('animate')
         anim = true
     } else {
-        document.getElementsByClassName("toTheTop")[0].classList.remove('hide')
+        document.getElementsByClassName("imgForbidden")[0].classList.remove('hide')
         if (anim) {
             document.getElementsByClassName("imgForbidden")[0].classList.add('animate')
         }
@@ -116,9 +116,9 @@ window.addEventListener("scroll", function() {
 function portrait () {
     const w = window.innerWidth
     if (w < 1500) {
-        const op = (Math.min(0.4, Math.max(0.1 + (w - 1000) * 3 / 5000, 0.1))).toString()
-        const pad = Math.min(18, Math.max(2 + (w - 1000) * 16 / 500, 2))
-        document.getElementById("portrait").style.background = "linear-gradient(90deg, rgba(0,0,0,0)" + (pad - 2).toString() + "%, rgba(0,0,0," + op + ")" + (pad - 2).toString() + "%, rgba(0,0,0," + op + ") " + (100 - pad + 2).toString() + "%, rgba(0,0,0,0) " + (100 - pad + 2).toString() + "%)"
+        const op = (Math.min(0.6, Math.max(0.6 - (w - 1000) * 5 / 5000, 0.1))).toString()
+        const pad = Math.min(18, Math.max(1 + (w - 1000) * 17 / 500, 1))
+        document.getElementById("portrait").style.background = "linear-gradient(90deg, rgba(0,0,0,0)" + (pad - 2).toString() + "%, rgba(0,0,0," + op + ")" + (pad - 3).toString() + "%, rgba(0,0,0," + op + ") " + (100 - pad + 3).toString() + "%, rgba(0,0,0,0) " + (100 - pad + 3).toString() + "%)"
         document.getElementById("textDiv").style.padding = "2%" + pad.toString() + "%"
     } else {
         document.getElementById("portrait").style.background = "linear-gradient(90deg, rgba(0,0,0,0) 15%, rgba(0,0,0,0.1) 15%, rgba(0,0,0,0.1) 85%, rgba(0,0,0,0) 85%)"
@@ -130,8 +130,3 @@ function portrait () {
 window.addEventListener("resize", function () {
     portrait()
 })
-
-// scroll to top action pour le bouton
-function goTop() {
-    window.scrollTo(0,0)
-}

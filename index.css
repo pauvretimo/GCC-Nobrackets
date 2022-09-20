@@ -17,6 +17,7 @@ html, body {
 
 
 body {
+    overflow-x: hidden;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -47,7 +48,7 @@ p strong {
 
 .title1 {
     text-align: center;
-    font-size: 10vh;
+    font-size: min(10vh, 100px);
     text-shadow: 2px 2px #B0E0EE;
 }
 
@@ -58,7 +59,9 @@ p strong {
 }
 
 .text {
-    line-height: max(3vh, 20px);
+    margin: 2% 18%;
+    line-height: max(3vh, 30px);
+    font-size: min(2vh, 30px);
 }
 
 .inscription {
@@ -72,6 +75,7 @@ p strong {
 .liText {
     margin-left: 6%;
     margin-bottom: 2%;
+    font-size: min(2vh, 30px);
 }
 
 .logo {
@@ -170,7 +174,7 @@ p strong {
 
     cursor: pointer;
 
-    background-color: rgba(144, 210, 220, 0.8);
+    background-image: linear-gradient(180deg, #2babb6 10%, #c4a73a 100%);
     border: solid 3px #0e606c;
     border-radius: 10px;
     color: white;
@@ -179,11 +183,25 @@ p strong {
     font-weight: bold;
 
     box-shadow: 0.06em 0.06em 0.05em 0.05em #B0E0EE;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    animation: floating 1.5s ease-in-out alternate infinite;
+}
+
+@keyframes floating {
+    from {transform: scale(100%)}
+    to {transform: scale(105%)}
+
 }
 
 .bouton:hover {
     transform: scale(108%);
     box-shadow: 0.06em 0.06em 0.06em 0.06em #B0E0EE;
+    animation: none;
 }
 
 .bouton:active {
@@ -192,7 +210,7 @@ p strong {
 }
 
 .foot {
-    width: 100%;
+    width: available;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -200,7 +218,9 @@ p strong {
     align-items: stretch;
     align-content: flex-end;
 
-    background-color: rgba(0, 0, 0, 0.3);
+    font-size: min(2vh, 20px);
+
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .contactes {
@@ -211,34 +231,19 @@ p strong {
     justify-content: space-evenly;
     align-items: center;
     align-content: center;
+    z-index: 1;
+    margin: 10px auto;
 }
 
 .droits {
     display: flex;
     justify-content: center;
-}
 
-.toTheTop {
-    display: block;
-    position: fixed;
-    right: 5%;
-    bottom: 5%;
-
-    cursor: pointer;
-
-    width: 3vw;
-    height: 3vw;
-    max-width: 65px;
-    max-height: 65px;
-
-    background-color: rgba(144, 210, 220, 0.8);
-    border: solid 4px #0e606c;
-    border-radius: 100%;
-    color: #0e606c;
-    font-size: xx-large;
-    font-stretch: expanded;
-    font-weight: bold;
-    line-height: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .hide {
@@ -246,8 +251,8 @@ p strong {
 }
 
 .imgForbidden {
-    z-index: 1;
     height: 80px;
+    width: 80px;
     position: fixed;
     bottom: 10px;
     left: -80px;
@@ -261,5 +266,33 @@ p strong {
 }
 
 @keyframes hiThere {
-from {transform: rotate(0); left: -80px} to {transform: rotate(50deg); left: -30px}
+    from {transform: rotate(0); left: -80px} to {transform: rotate(50deg); left: -10px}
+}
+
+.positioning {
+    position: relative;
+    width: 0;
+    height: 0;
+}
+
+.twitterLogo {
+    height: 20px;
+}
+
+.linkedinLogo {
+    height: 20px;
+}
+
+.socialMediaLink {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    color: white;
+}
+a, a:hover, a:visited, a:active {
+    color: inherit;
+    text-decoration: none;
 }
