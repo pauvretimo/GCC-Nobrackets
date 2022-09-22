@@ -7,7 +7,7 @@
         day = hour * 24;
 
 
-    const dayMonth = "10/22/"
+    const dayMonth = "11/26/"
     const eventday = dayMonth + "2022";
 
     const countDown = new Date(eventday).getTime(),
