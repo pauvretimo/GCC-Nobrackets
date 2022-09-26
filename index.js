@@ -6,14 +6,12 @@
         hour = minute * 60,
         day = hour * 24;
 
-
-    const dayMonth = "11/26/"
-    const eventday = dayMonth + "2022";
+    const eventday = '2022-11-26T10:00:00Z';
 
     const countDown = new Date(eventday).getTime(),
         x = setInterval(function() {
 
-            const now = new Date().getTime(),
+            const now = Date.now(),
                 distance = countDown - now;
 
             // Change le jour
