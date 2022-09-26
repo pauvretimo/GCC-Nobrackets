@@ -28,7 +28,7 @@ body {
 }
 
 p strong {
-    color: #53b9c9;
+    color: #30c1ce;
     font-size: larger;
 }
 
@@ -174,7 +174,7 @@ p strong {
 
     cursor: pointer;
 
-    background-image: linear-gradient(180deg, #2babb6 10%, #c4a73a 100%);
+    background-image: linear-gradient(180deg, #30c1ce 10%, #e4c343 100%);
     border: solid 3px #0e606c;
     border-radius: 15px;
     color: white;
