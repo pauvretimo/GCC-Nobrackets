@@ -6,7 +6,7 @@
         hour = minute * 60,
         day = hour * 24;
 
-    const eventday = '2022-11-26T10:00:00Z';
+    const eventday = '2022-11-26T10:00:00+02:00';
 
     const countDown = new Date(eventday).getTime(),
         x = setInterval(function() {
